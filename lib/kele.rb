@@ -1,5 +1,6 @@
 require 'HTTParty'
 require 'json'
+require_relative 'roadmap'
 
 class Kele
     include HTTParty
@@ -23,6 +24,8 @@ class Kele
     slots = JSON.parse(response.body)
 slots
 end
+
+
 
 
 end
