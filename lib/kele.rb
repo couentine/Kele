@@ -19,7 +19,7 @@ class Kele
 
     def get_mentor_availability(mentor_id)
     id = mentor_id.to_s
-    response = self.class.get('#{BASE_URI}/mentors/' + id + '/student_availability', headers: { "authorization" => @auth_token })
+    response = self.class.get("#{BASE_URI}/mentors/" + id + "/student_availability", headers: { "authorization" => @auth_token })
     slots = JSON.parse(response.body)
 slots
 end
